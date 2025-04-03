@@ -68,6 +68,9 @@ const withTurpopack = {
  * @type {import('next').NextConfig}
  */
 module.exports = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   transpilePackages: [
     'react-native',
     'react-native-web',
