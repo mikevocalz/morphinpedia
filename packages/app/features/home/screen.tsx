@@ -8,7 +8,7 @@ import { View } from 'react-native'
 
 export function HomeScreen() {
   return (
-    <View className="flex-1 items-center gap-8 bg-red-500">
+    <View className="flex-1 items-center gap-8 bg-red-500 min-h-screen w-full">
       <H1>Welcome to Solito.</H1>
       <View style={{ maxWidth: 600, gap: 16 }}>
         <Text style={{ textAlign: 'center' }}>

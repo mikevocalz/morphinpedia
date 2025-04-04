@@ -11,6 +11,7 @@ import { Clock, Globe, Compass, Users, Heart } from 'lucide-react-native';
 import { MotiView } from 'moti';
 import { Image } from 'expo-image';
 import { SolitoImage } from 'solito/image';
+import { HeaderDropDown } from './HeaderDropdown';
 
 
 const GITHUB_AVATAR_URI = 'https://www.github.com/mrzachnugent.png'
@@ -57,7 +58,7 @@ export default function SiteHeader() {
     const [isSignedIn, setIsSignedIn] = useState(false)
 
   return (
-    <Header className="sticky justify-center top-0 z-50 bg-red-800 backdrop-blur-sm  flex-row">
+    <Header style={{ zIndex: 1000 }} className="sticky relative justify-center top-0 z-50 bg-red-800 backdrop-blur-sm  flex-row">
       <View className="flex-1 max-w-screen-2xl px-2 sm:px-3 lg:px-4 items-center w-full">
         <View className="flex items-center justify-between h-16 flex-row w-full">
           {/* Logo - Left aligned */}
@@ -146,15 +147,7 @@ export default function SiteHeader() {
 
           <View className="md:block self-center">
             {!isSignedIn ? (
-              <Avatar size={46} className='mr-1'>
-                <AvatarImage
-                  priority
-                  src={GITHUB_AVATAR_URI}
-                  alt="User profile picture"
-                  contentFit="contain"
-                />
-                <AvatarFallback name="Zach Nugent" />
-              </Avatar>
+              <HeaderDropDown />
             ) : (
               <Pressable className="ml-8 mr-4  px-4 py-2  bg-indigo-600 rounded-md hover:bg-indigo-700">
                 <Text className="text-[16px] font-extrabold tracking-wider  text-white">

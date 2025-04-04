@@ -10,9 +10,11 @@ export function UserDetailScreen() {
   
 
   return (
-    <View className="flex-1 h-screen w-full items-center bg-zinc-200 dark:bg-stone-950">
+    <View className="flex-1 items-center gap-8 bg-zinc-200 dark:bg-stone-950 min-h-screen w-full">
       <Pressable onPress={() => router.back()}>
-        <Text className='text-2xl font-bold dark:text-white'>👈 Go Home now</Text>
+        <Text className="text-2xl font-bold dark:text-white">
+          👈 Go Home now
+        </Text>
       </Pressable>
 
       <View className="my-12 bg-red-500 p-6">

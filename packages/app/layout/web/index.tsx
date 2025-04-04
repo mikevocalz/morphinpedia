@@ -1,6 +1,7 @@
 'use client'
 import { ReactElement, ReactNode} from 'react'
-import SiteHeader from '../../components/SiteHeader'
+import SiteHeader from '../../components/SiteHeader';
+import { SiteFooter } from '../../components/SiteFooter';
 import { Platform } from 'react-native'
 import { useLayoutEffect, useEffect, useRef, useState } from 'react'
 import { useColorScheme } from 'nativewind'
@@ -31,13 +32,14 @@ const WebLayout = ({ children }: { children: ReactNode }) => {
 
 
 return (
-  <Div className="h-screen w-full flex flex-col bg-zinc-200 ">
+  <Div className="min-h-screen w-full flex flex-col bg-zinc-200 ">
     <SiteHeader />
-    <Main className="w-full max-w-screen-2xl flex-1 overflow-y-auto h-[calc(100vh-8rem)] self-center ">
+    <Main className="flex-1 w-full max-w-screen-2xl self-center">
       {children}
     </Main>
+    <SiteFooter />
   </Div>
- ) 
+) 
 }
 
 export default WebLayout

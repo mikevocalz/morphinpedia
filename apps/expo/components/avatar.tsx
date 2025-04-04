@@ -25,7 +25,7 @@ const Avatar = ({
 }) => (
   <AvatarContext.Provider value={{ size }}>
     <View
-      className={`overflow-hidden border-2  bg-gray-300 ${className}`}
+      className={`overflow-hidden border-[2px] border-white  bg-gray-300 ${className}`}
       style={{
         width: size,
         height: size,
@@ -75,6 +75,8 @@ const AvatarImage = ({
         width: size,
         height: size,
         borderRadius: size / 2,
+        borderColor: 'white',
+        borderWidth: 1,
       }}
     />
   );
@@ -109,6 +111,8 @@ const AvatarFallback = ({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'gray',
+        borderColor: 'white',
+        borderWidth: 1,
         width: size,
         height: size,
         borderRadius: size / 2,
