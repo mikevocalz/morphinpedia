@@ -32,9 +32,11 @@ const WebLayout = ({ children }: { children: ReactNode }) => {
 
 
 return (
-  <Div className="min-h-screen w-full flex flex-col bg-zinc-200 ">
+  <Div className="min-h-screen w-full flex flex-col bg-zinc-200
+    scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thin scrollbar-thumb-yellow-500 scrollbar-track-yellow-900 h-32 overflow-y-scroll">
+
     <SiteHeader />
-    <Main className="flex-1 w-full max-w-screen-2xl self-center">
+    <Main className="flex w-full max-w-screen-2xl self-center">
       {children}
     </Main>
     <SiteFooter />
