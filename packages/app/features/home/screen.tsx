@@ -2,13 +2,13 @@
 
 import { TextLink } from 'solito/link'
 import { MotiLink } from 'solito/moti/app'
-import { Text, View } from 'react-native'
+import { Button } from '../../../../apps/expo/components/Button'
+import { Text } from '../../../../apps/expo/components/text'
+import { View } from 'react-native'
 
 export function HomeScreen() {
   return (
-    <View
-     className="flex-1 items-center justify-center gap-8 bg-red-500"
-    >
+    <View className="flex-1 items-center gap-8 bg-red-500">
       <H1>Welcome to Solito.</H1>
       <View style={{ maxWidth: 600, gap: 16 }}>
         <Text style={{ textAlign: 'center' }}>
@@ -24,7 +24,7 @@ export function HomeScreen() {
             rel="noreferrer"
             style={{ color: 'blue' }}
           >
-            Fernando Rojo
+              <Text> Fernando Rojo</Text>
           </TextLink>
           .
         </Text>
