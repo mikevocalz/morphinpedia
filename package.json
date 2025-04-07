@@ -7,7 +7,8 @@
   ],
   "dependencies": {
     "metro": "^0.82.1",
-    "metro-resolver": "^0.82.1"
+    "metro-resolver": "^0.82.1",
+    "patch-package": "^8.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.21",
