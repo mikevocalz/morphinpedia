@@ -4,7 +4,7 @@ import { TextLink } from 'solito/link'
 import { MotiLink } from 'solito/moti/app'
 import { Button } from '../../../../apps/expo/components/Button'
 import { Text } from '../../../../apps/expo/components/text'
-import { View } from 'react-native'
+import { H1 } from '@expo/html-elements'
 
 export function ResetScreen() {
   return (

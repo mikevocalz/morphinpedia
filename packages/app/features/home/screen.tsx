@@ -24,7 +24,7 @@ export function HomeScreen() {
             rel="noreferrer"
             style={{ color: 'blue' }}
           >
-              <Text> Fernando Rojo</Text>
+            <Text> Fernando Rojo</Text>
           </TextLink>
           .
         </Text>
@@ -37,7 +37,7 @@ export function HomeScreen() {
           Regular Link
         </TextLink>
         <MotiLink
-          href="/users/fernando"
+          href="/users/Mike?search=hey!"
           from={{
             scale: 0,
             rotateZ: '0deg',

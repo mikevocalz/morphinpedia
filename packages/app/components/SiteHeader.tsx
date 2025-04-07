@@ -47,11 +47,12 @@ const headerLinks: Array<{
     name: 'Friends',
   },
   {
-    pathname: '/moments',
-    isActive: (pathname) => pathname.startsWith('/moments'),
+    pathname: '/register',
+    isActive: (pathname) => pathname.startsWith('/register'),
     name: 'Moments',
   },
 ]
+
 export default function SiteHeader() {
 
     const pathname = usePathname()

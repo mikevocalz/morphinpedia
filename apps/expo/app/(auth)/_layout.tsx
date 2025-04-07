@@ -1,6 +1,10 @@
 import { Stack, Redirect } from 'expo-router';
 
 export default function AuthLayout() {
+  // const isAuthenticated = null;
+  // if (!isAuthenticated) {
+  //   return <Redirect href="../(auth)/userAccess" />;
+  // }
   return (
     <Stack
       screenOptions={{

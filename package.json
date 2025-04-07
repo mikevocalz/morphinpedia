@@ -5,6 +5,10 @@
     "apps/*",
     "packages/*"
   ],
+  "dependencies": {
+    "metro": "^0.82.1",
+    "metro-resolver": "^0.82.1"
+  },
   "devDependencies": {
     "@types/react": "^18.2.21",
     "eslint": "^8.21.0",
@@ -12,8 +16,8 @@
     "typescript": "^5.3.3"
   },
   "scripts": {
-    "native": "cd apps/expo && yarn start",
-    "web": "cd apps/next && yarn next",
+    "native": "cd apps/expo && bun start",
+    "web": "cd apps/next && bun next",
     "postinstall:css": "npx tailwindcss -i ./apps/expo/global.css -o ./node_modules/.cache/nativewind/global.css"
   },
   "packageManager": "yarn@4.7.0",

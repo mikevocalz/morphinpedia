@@ -4,6 +4,7 @@
     "slug": "morphinpedia",
     "version": "1.0.0",
     "scheme": "morphinpedia",
+    "newArchEnabled": true,
     "web": {
       "bundler": "metro",
       "output": "server",
@@ -12,12 +13,13 @@
     "plugins": [
       "expo-router",
       "expo-secure-store",
-       [
-         "expo-router",
-         {
-           "origin": "https://morphinpedia.vercel.app/"
-         }
-       ]
+      [
+        "expo-router",
+        {
+          "origin": "https://morphinpedia.vercel.app/"
+        }
+      ],
+      "expo-asset"
     ],
     "experiments": {
       "typedRoutes": true,

@@ -124,6 +124,7 @@ module.exports = {
     'react-native-gesture-handler',
     'nativewind',
     'react-native-css-interop',
+    'class-variance-authority',
     '@rn-primitives/aspect-ratio',
     '@rn-primitives/avatar',
     '@rn-primitives/dropdown-menu',
@@ -137,7 +138,8 @@ module.exports = {
     'expo-modules-core',
     'clsx',
     'tailwind-merge',
-    '@expo/html-elements'
+    '@expo/html-elements',
+    'tailwindcss'
   ],
 
   compiler: {
