@@ -3,9 +3,9 @@ import Logo from '../../../apps/expo/components/Logo'
 import ButtonLink from './ButtonLink';
 import { usePathname } from 'solito/navigation'
 import { Avatar, AvatarImage, AvatarFallback } from '../../../apps/expo/components/avatar';
-import { Text,View, Pressable, } from 'react-native';
+import { Text,View, Pressable, useWindowDimensions, } from 'react-native';
 import { Header , Nav} from '@expo/html-elements'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'solito/link';
 import {House, SquareLibrary,  Heart, ToyBrick , Calendar1} from 'lucide-react-native';
 import { MotiView } from 'moti';
@@ -58,9 +58,27 @@ export default function SiteHeader() {
     const pathname = usePathname()
     const [isSignedIn, setIsSignedIn] = useState(false)
 
+     const [scrolled, setScrolled] = useState(false)
+
+     const headerHeight = useWindowDimensions().height
+
+     
+     useEffect(() => {
+       const onScroll = () => {
+         setScrolled(window.scrollY >= 64)
+       }
+
+       onScroll()
+       window.addEventListener('scroll', onScroll)
+       return () => window.removeEventListener('scroll', onScroll)
+     }, [])
+
   return (
-    <Header style={{ zIndex: 1000 }} className="sticky relative justify-center top-0 z-50 bg-red-800 backdrop-blur-sm  flex-row">
-      <View className="flex-1 max-w-screen-2xl px-2 sm:px-3 lg:px-4 items-center w-full">
+    <Header
+      style={{ zIndex: 1000 }}
+      className={`sticky relative justify-center inset-x-0 top-0 z-50 !h-[64px] flex-row transition-all ease-in-out duration-300 ${scrolled ? '!bg-red-800' : '!bg-transparent'}`}
+    >
+      <View className="flex max-w-screen-2xl px-2 sm:px-3 lg:px-4 items-center w-full">
         <View className="flex items-center justify-between h-16 flex-row w-full">
           {/* Logo - Left aligned */}
           <Link href="/">
@@ -112,7 +130,9 @@ export default function SiteHeader() {
                       <IconComponent
                         size={24}
                         color={isActive ? '#000' : '#fff'}
-                        fill={isActive ? 'rgba(233, 215, 0, 0.7)' : 'transparent'}
+                        fill={
+                          isActive ? 'rgba(233, 215, 0, 0.7)' : 'transparent'
+                        }
                         strokeWidth={isActive ? 2.5 : 2}
                       />
                       {/* Animated Underline */}

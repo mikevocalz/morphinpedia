@@ -1,8 +1,9 @@
 'use client'
 import { useServerInsertedHTML } from 'next/navigation'
+import { ReactNode } from 'react'
 import { StyleSheet } from 'react-native'
 
-export function StylesProvider({ children }: { children: React.ReactNode }) {
+export function StylesProvider({ children }: { children:ReactNode }) {
   useServerInsertedHTML(() => {
     // @ts-ignore
     const sheet = StyleSheet.getSheet()
