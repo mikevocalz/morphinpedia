@@ -32,7 +32,7 @@ const ButtonLink = ({ children, href, as, isActive: propIsActive }) => {
       <A
         className={`px-3 py-2 text-lg font-bold ${
           isActive ? 'text-black' : 'text-white'
-        } hover:text-gray-400`}
+        } hover:text-[#e9d700]`}
       >
         {children}
       </A>

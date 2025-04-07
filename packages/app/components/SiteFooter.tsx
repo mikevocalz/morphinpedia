@@ -9,14 +9,14 @@ export function SiteFooter() {
       style={{ zIndex: -1000 }}
       className="relative w-full bg-red-800 -z-10 text-slate-200"
     >
-      <Div className="mx-auto self-center px-4 py-12 max-w-screen-2xl">
+      <Div className="px-4 py-12 max-w-screen-2xl">
         <Div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* First column with logo */}
           <Div className="flex-1 flex-col space-y-6">
             <Link href="/" className="flex items-center">
               <Logo height={100} width={250} />
             </Link>
-            <P className="mt-2 text-sm text-slate-400">
+            <P className="mt-2 text-sm text-slate-400 max-w-[200px]">
               We're dedicated to providing exceptional service and innovative
               solutions to meet your needs.
             </P>
@@ -178,7 +178,7 @@ export function SiteFooter() {
         </Div>
       </Div>
       <Div className="relative mt-6 border-t border-slate-800  bg-black w-full items-center justify-center">
-        <P className="mb-4 text-center text-md font-semibold text-slate-400">
+        <P className="mb-4 text-center text-md font-semibold text-slate-400 break-words ">
           © {new Date().getFullYear()} Morphinpedia. All rights reserved...May
           the Power Protect You ⚡
         </P>

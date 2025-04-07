@@ -7,7 +7,7 @@ import { Text,View, Pressable, } from 'react-native';
 import { Header , Nav} from '@expo/html-elements'
 import { useState } from 'react';
 import { Link } from 'solito/link';
-import { Clock, Globe, Compass, Users, Heart } from 'lucide-react-native';
+import {House, SquareLibrary,  Heart, ToyBrick , Calendar1} from 'lucide-react-native';
 import { MotiView } from 'moti';
 import { Image } from 'expo-image';
 import { SolitoImage } from 'solito/image';
@@ -17,10 +17,10 @@ import { HeaderDropDown } from './HeaderDropdown';
 const GITHUB_AVATAR_URI = 'https://www.github.com/mrzachnugent.png'
 
 const iconComponents = {
-  Timeline: Clock,
-  Explore: Globe,
-  Friends: Users,
-  Moments: Heart,
+  Home: House,
+  Database: SquareLibrary,
+  Toys: ToyBrick,
+  Calendar: Calendar1,
 }
 
 
@@ -33,23 +33,23 @@ const headerLinks: Array<{
   {
     pathname: '/',
     isActive: (pathname) => pathname === '/',
-    name: 'Timeline',
+    name: 'Home',
   },
   {
     pathname: '/explore',
     isActive: (pathname) => pathname.startsWith('/explore') || pathname.startsWith('/users/'),
-    name: 'Explore',
+    name: 'Database',
     protected: false,
   },
   {
     pathname: '/friends',
     isActive: (pathname) => pathname.startsWith('/friends'),
-    name: 'Friends',
+    name: 'Toys',
   },
   {
     pathname: '/register',
     isActive: (pathname) => pathname.startsWith('/register'),
-    name: 'Moments',
+    name: 'Calendar',
   },
 ]
 
@@ -112,7 +112,7 @@ export default function SiteHeader() {
                       <IconComponent
                         size={24}
                         color={isActive ? '#000' : '#fff'}
-                        fill={isActive ? '#4c4c4c' : 'transparent'}
+                        fill={isActive ? 'rgba(233, 215, 0, 0.7)' : 'transparent'}
                         strokeWidth={isActive ? 2.5 : 2}
                       />
                       {/* Animated Underline */}
