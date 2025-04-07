@@ -30,7 +30,7 @@ function AuthScreen() {
         onValueChange={setActiveTab}
         className="w-full max-w-xl mx-auto p-2 flex-col web:rounded-xl gap-4  "
       >
-        <TabsList className="flex-row w-full bg-zinc-100 dark:bg-stone-800 mb-[6px] web:border-[1px] !border-black">
+        <TabsList className="flex-row w-full bg-zinc-100 dark:bg-stone-800 mb-[6px] web:!border-[0px] !border-none">
           <TabsTrigger
             value="login"
             className={`flex-1 shadow-none rounded-sm web:rounded-md ${activeTab === 'login' ? '!bg-zinc-300 dark:!bg-zinc-700 mx-1 h-[34px]' : 'transparent'}`}
