@@ -16,9 +16,9 @@
     "typescript": "^5.3.3"
   },
   "scripts": {
-    "postinstall": "bunx patch-package",
-    "native": "cd apps/expo && bun start",
-    "web": "cd apps/next && bun next",
+    "postinstall": "patch-package",
+    "native": "cd apps/expo && yarn start",
+    "web": "cd apps/next && yarn next",
     "postinstall:css": "npx tailwindcss -i ./apps/expo/global.css -o ./node_modules/.cache/nativewind/global.css"
   },
   "packageManager": "yarn@4.7.0",
